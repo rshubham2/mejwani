@@ -50,9 +50,9 @@
           <li><a href="#events">Events</a></li>
           <!-- <li><a href="#chefs">Chefs</a></li> -->
           <li><a href="#gallery">Gallery</a></li>
-          <li class="dropdown"><a href="#events"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown"><a href=""><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li class="dropdown"><a href="#events"><span>Catering</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+              <li class="dropdown"><a href=""><span>Catering</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
                   <li><a href="#events">Banquet Catering</a></li>
                   <li><a href="#events">Wedding Catering</a></li>
@@ -61,7 +61,7 @@
                   <li><a href="#events">House Warming Catering</a></li>
                 </ul>
               </li>
-              <li class="dropdown"><a href="#events"><span>Packed Meals</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+              <li class="dropdown"><a href=""><span>Packed Meals</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
                   <li><a href="#events">Customizable Meal Boxes</a></li>
                   <li><a href="#events">Customizable Snack Boxes</a></li>
@@ -70,7 +70,7 @@
                   <li><a href="#events">Deep Drop Down 5</a></li> -->
                 </ul>
               </li>
-              <li class="dropdown"><a href="#events"><span>Parties</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+              <li class="dropdown"><a href=""><span>Parties</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
                   <li><a href="#events">Custom Parties</a></li>
                   <li><a href="#events">Birthday Parties</a></li>
@@ -147,7 +147,7 @@
 
               <div class="position-relative mt-4">
                 <img src="assets/img/about-2.jpg" class="img-fluid" alt="">
-                <a href="assets/img/MVI_7190.MP4" class="glightbox play-btn"></a>
+                <a href="assets/img/MVI_7190.MP4" class="glightbox play-btn" ></a>
               </div>
             </div>
           </div>
@@ -169,7 +169,7 @@
                 Choosing Our Catering Service means choosing excellence in every detail. At Our Catering Service, it's not just about the food; it's about creating moments that linger in memory. Choose us for a celebration that reflects your vision, tastes extraordinary, and leaves a lasting impression on your guests.
               </p>
               <div class="text-center">
-                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                <a href="#" class="more-btn">Learn More<i class="bx bx-chevron-right"></i></a>
               </div>
             </div>
           </div><!-- End Why Box -->
@@ -300,7 +300,7 @@
                 <a href="assets/img/menu/starter/pani puri.png" class="glightbox"><img src="assets/img/menu/starter/pani puri.png" class="menu-img img-fluid" alt=""></a>
                 <h4>Pani Puri</h4>
                 <p class="ingredients">
-                  Pani puri is a popular Indian street food of crispy, fried, hollow dough balls that are stuffed with boiled potatoes, steamed moong sprouts, spicy tangy water and sweet chutney.
+                  7Pani puri is a popular Indian street food of crispy, fried, hollow dough balls that are stuffed with boiled potatoes, steamed moong sprouts, spicy tangy water and sweet chutney.
                 </p>
                 <!-- <p class="price">
                   $5.95
@@ -863,7 +863,7 @@
 
         </div>
 
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form p-3 p-md-4">
+        <form  method="POST" role="form" class="php-email-form p-3 p-md-4">
           <div class="row">
             <div class="col-xl-6 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -876,14 +876,14 @@
             <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
           </div>
           <div class="form-group">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
           </div>
           <div class="my-3">
             <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
+            
+            
           </div>
-          <div class="text-center"><button type="submit">Send Message</button></div>
+          <div class="text-center"><button type="submit" onclick="Send()">Send Message</button></div>
         </form><!--End Contact Form -->
 
       </div>
@@ -937,7 +937,7 @@
             <a href="tel:+919004509806" class="phone"><i class="bi bi-telephone"></i></a>
             <a href="https://www.google.com/maps/dir//Mejwani+Caterers+And+Decor/data=!4m8!4m7!1m0!1m5!1m1!1s0x3be7c7d481a6eb89:0xd768a2f9f8ff2da1!2m2!1d72.9138395!2d19.0536574" class="maps"><i class="bi bi-geo-alt"></i></a>
             <a href="https://instagram.com/mejwani_caterers_decor?igshid=OGQ5ZDc2ODk2ZA==" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://web.whatsapp.com/send/?phone=%2B919004509806&text&type=phone_number&app_absent=0" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=%2B919004509806&text&type=phone_number&app_absent=0" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
           </div>
         </div>
 
@@ -965,6 +965,8 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>  
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -975,6 +977,43 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script>
+
+    function Send(){
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var subject = document.getElementById("subject").value;
+      var message = document.getElementById("message").value;
+      
+      var body = "Name: " + name +"<br/> Email: " + email + "<br/> Subject: " + subject + "<br/> Message: " + message;
+      console.log(body)
+      console.log(message.length);
+
+      if(message.length !=0 && name.length != 0 && email.length != 0 && subject.length != 0){
+          Email.send({
+          SecureToken : "f2d6c0c4-2e59-4283-b798-c78da8a58f4e",
+          Password : "A7DA30AD658EACE2BFA89156438A30692A9C",
+          To : 'mejwani.caterers@gmail.com',
+          From : "shubhamrane190@gmail.com",
+          Subject : subject,
+          Body : body
+}).then(
+  message => {
+    if(message == 'OK'){
+      swal("Successfull", "Your data successfully recieved", "success");
+      console.log("data recieved");
+    }
+  }
+);
+      }else{
+      swal("Something went wrong", "Please fill required information", "error");
+      console.log('data not recieved')
+    }
+      
+    }
+  
+
+  </script>
 </body>
 
 </html>

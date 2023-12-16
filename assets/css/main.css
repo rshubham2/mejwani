@@ -1171,6 +1171,11 @@ section {
 /*--------------------------------------------------------------
 # Book A Table Section
 --------------------------------------------------------------*/
+
+.user-cannot-see {
+  display:none
+}
+
 .book-a-table .reservation-img {
   min-height: 500px;
   background-size: cover;
