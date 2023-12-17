@@ -875,7 +875,7 @@
             </div>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            <input type="tel" class="form-control" name="subject" id="subject" placeholder="Contact No." required>
           </div>
           <div class="form-group">
             <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
@@ -987,7 +987,7 @@
       var subject = document.getElementById("subject").value;
       var message = document.getElementById("message").value;
       
-      var body = "Name: " + name +"<br/> Email: " + email + "<br/> Subject: " + subject + "<br/> Message: " + message;
+      var body = "Name: " + name +"<br/> Email: " + email + "<br/> Contact No: " + subject + "<br/> Message: " + message;
       console.log(body)
       console.log(message.length);
 
@@ -997,7 +997,7 @@
           Password : "A7DA30AD658EACE2BFA89156438A30692A9C",
           To : 'mejwani.caterers@gmail.com',
           From : "shubhamrane190@gmail.com",
-          Subject : subject,
+          Subject : "Knock Knock!!",
           Body : body
 }).then(
   message => {
